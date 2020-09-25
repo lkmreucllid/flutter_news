@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import '../models/item_model.dart';
 import 'loading_container.dart';
+import 'package:html_unescape/html_unescape.dart';
 
 class Comment extends StatelessWidget {
   final int itemId;
@@ -43,7 +44,9 @@ class Comment extends StatelessWidget {
   }
 
   Widget buildText(ItemModel item) {
-    final text = item.text
+    var unescape = new HtmlUnescape();
+    var text = unescape.convert(item.text);
+    text = item.text
         .replaceAll('&#x27;', "'")
         .replaceAll('<p>', '\n\n')
         .replaceAll('</p>', '')

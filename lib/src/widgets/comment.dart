@@ -38,7 +38,15 @@ class Comment extends StatelessWidget {
           });
 
           return Column(
-            children: children,
+            children: [
+              Card(
+                elevation: 20.0,
+                color: Colors.green[50],
+                child: Column(
+                  children: children,
+                ),
+              )
+            ],
           );
         });
   }

@@ -14,6 +14,7 @@ class NewsDetails extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Story Details'),
+        backgroundColor: Colors.grey[500],
       ),
       body: buildBody(bloc),
     );
@@ -60,6 +61,7 @@ class NewsDetails extends StatelessWidget {
 
   Widget buildTitle(ItemModel item) {
     return Container(
+      color: Colors.green[50],
       alignment: Alignment.topCenter,
       margin: EdgeInsets.all(10.0),
       child: Text(

@@ -10,6 +10,7 @@ class NewsList extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Top News'),
+        backgroundColor: Colors.grey[500],
       ),
       body: buildList(bloc),
     );
